@@ -65,6 +65,7 @@ Client side:<br>
 </ul>
 <h5>Limitations in implemented features</h5>
 <ul>
+<li>Faces problem with file permissions in some computers</li>
 <li>Bugs not fixed</li>
 <li>Doesn't work smooth with lower java versions</li>
 <li>Lacks a smooth scheduling algorithm</li>
