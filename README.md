@@ -7,7 +7,7 @@
 <ul><li>Java</li></ul>
 
 <h3>Development Environment</h3>
-<ul><li>Netbeans</li></ul>
+<ul><li>Netbeans 8.0</li></ul>
 
 <h3>Prerequisites</h3>
 <ul><li>Java version 1.7.0_51</li></ul>
