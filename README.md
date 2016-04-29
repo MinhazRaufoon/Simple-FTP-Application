@@ -1,4 +1,8 @@
 # Simple-FTP-Application
+<html>Language: Java</html>
+
+
+
 A Java application by which files can be transferred among server and client devices.
 There are two different versions- Server and Client (there are two different main classes for those)
 
