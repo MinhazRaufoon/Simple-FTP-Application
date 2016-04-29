@@ -6,6 +6,9 @@
 <h3>Language used</h3>
 <ul><li>Java</li></ul>
 
+<h3>Development Environment</h3>
+<ul><li>Netbeans</li></ul>
+
 <h3>Prerequisites</h3>
 <ul><li>Java version 1.7.0_51</li></ul>
 <ul><li>Internet connection</li></ul>
