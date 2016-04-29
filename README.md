@@ -10,7 +10,7 @@
  </ul><br>
 <h5>How to use</h5>
 <p>Run the ServerMain.java. The following view will appear</p><br>
-<img src="http://i.imgur.com/rW0CWGV.png" style="width:200px;height:100px;">
+<img src="http://i.imgur.com/rW0CWGV.png" style="width:100px;height:50px;">
  
 
 </body></html>
