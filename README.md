@@ -8,6 +8,7 @@
 
 <h3>Prerequisites</h3>
 <ul><li>Java version 1.7.0_51</li></ul>
+<ul><li>Internet connection</li></ul>
 
 <h3>Server</h3>
 <h5>Features</h5>
@@ -61,6 +62,7 @@ Client side:<br>
 </ul>
 <h5>Limitations in implemented features</h5>
 <ul>
+<li>Bugs not fixed</li>
 <li>Doesn't work smooth with lower java versions</li>
 <li>Lacks a smooth scheduling algorithm</li>
 <li>Memory and CPU usage not optimized</li>
