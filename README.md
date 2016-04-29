@@ -4,7 +4,7 @@
 <p>This project implements a simple FTP application using the TCP protocol which offers file transfer among the server and clients. There are two extensions- <ul><li>Server</li><li>Client</li></ul> </p>
 
 <h3>Prerequisites</h3>
-<ul><li>Java version 1.7.0_51</li><li>Client</li></ul>
+<ul><li>Java version 1.7.0_51</li></ul>
 
 <h3>Server</h3>
 <h5>Features</h5>
