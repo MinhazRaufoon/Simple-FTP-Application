@@ -23,7 +23,7 @@ import myftp.lib.ClientFacade;
  */
 public class ServerListenerThread extends Thread{
     
-    public String cur_relative_dir="\\";
+    public String cur_relative_dir="/";
     
     FTP_Client this_client;
     DataInputStream in;

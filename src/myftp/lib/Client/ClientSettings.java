@@ -22,14 +22,15 @@ import myftp.lib.Utility;
  * @author RAUF00N
  */
 public class ClientSettings {
-    String settings_dir = "C:\\myFTP saved files\\Client\\";
-    public String save_dir = "D:\\myFTP downloads\\";
+	String root = System.getProperty("user.home")+ "/";
+    String settings_dir = root + "myFTP saved files/Client/";
+    public String save_dir = root + "/myFTP downloads/";
     
     public ClientSettings()
     {
-        new File("D:\\myFTP downloads\\").mkdir();
-        new File("C:\\myFTP saved files\\").mkdir();
-        new File("C:\\myFTP saved files\\Client\\").mkdir();
+        new File(root + "myFTP downloads/").mkdir();
+        new File(root + "myFTP saved files/").mkdir();
+        new File(root + "myFTP saved files/Client/").mkdir();
         load();
     }
     void load() 

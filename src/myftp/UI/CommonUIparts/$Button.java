@@ -6,7 +6,6 @@
 package myftp.UI.CommonUIparts;
 
 import myftp.UI.Utility.$ClickListener;
-import com.sun.awt.AWTUtilities;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;

@@ -35,24 +35,18 @@ public class ServerStorageBrowser extends HddBrowser{
     }
 
     @Override
-    void enterDir(File dir) {
-    
-    }
+    void enterDir(File dir) {}
 
     @Override
     void goBack() {
         try{
-        (new BackButtonWork(this)).start();
-        }catch(Exception e)
-        {
-            
-        }
+        	(new BackButtonWork(this)).start();
+        } catch(Exception e) {}
     }
 
     @Override
     public void ListFiles($Directory file) {
         String serverPath = file.file.getPath();
-        
     }
 
     @Override
@@ -65,8 +59,7 @@ public class ServerStorageBrowser extends HddBrowser{
     public void onClick$Dir($Directory dir) {
         // get dir->file->path
         // send a request: LIST path
-        ClientFacade.getInstance().writeOnMessageLog("request list at "+this.clientframe.this_client.serverListener.cur_relative_dir+"\\"+dir.file.getName(), 100);
-                    
+        ClientFacade.getInstance().writeOnMessageLog("request list at "+this.clientframe.this_client.serverListener.cur_relative_dir+"\\"+dir.file.getName(), 100);          
         ListDirs(dir);
         ListFiles(dir);
     }
@@ -97,7 +90,7 @@ class ServerDirListThread extends Thread
             {
                 out.writeUTF("LS");
                 request = ssb.clientframe.this_client.serverListener.cur_relative_dir
-                        +"\\"+file.file.getName();
+                        + "/" + file.file.getName();
                 ssb.clientframe.this_client.serverListener.cur_relative_dir = request+"";
                 out.writeUTF(request);
             }
@@ -118,13 +111,13 @@ class BackButtonWork extends Thread
     public void run()
     {
         String dir = ssb.clientframe.this_client.serverListener.cur_relative_dir+"";
-        int l = dir.lastIndexOf("\\");
+        int l = dir.lastIndexOf("/");
         String res = "";
         for(int i=0;i<l;i++)
         {
             res+=dir.charAt(i)+"";
         }
-        if(res.equals("")) res = "\\";
+        if(res.equals("")) res = "/";
         ssb.clientframe.this_client.serverListener.cur_relative_dir = res+"";        
         
         DataOutputStream out;

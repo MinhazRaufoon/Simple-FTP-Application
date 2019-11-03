@@ -19,7 +19,8 @@ import myftp.lib.Utility;
  * @author RAUF00N
  */
 public class Settings {
-    String settings_dir = "C:\\myFTP saved files\\Server\\";
+	String root = System.getProperty("user.home")+ "/";
+    String settings_dir = root + "myFTP saved files/Server/";
     public String default_home;
     // other setting
     public String welcomeMsg;
@@ -40,16 +41,16 @@ public class Settings {
     
     public Settings()
     {
-        // try to create folder
+    	// try to create folder
         // *** these will be created even though home is changed, deal with it later
-        new File("C:\\myFTP saved files\\").mkdir();
-        new File("C:\\myFTP saved files\\Server\\").mkdir();
+        new File(root + "myFTP saved files/").mkdir();
+        new File(root + "myFTP saved files/Server/").mkdir();
         
-        new File("C:\\myFTP SERVER\\").mkdir();
-        new File("C:\\myFTP SERVER\\HOME\\").mkdir();
-        new File("C:\\myFTP SERVER\\HOME\\HOME\\").mkdir();
+        new File(root + "myFTP SERVER/").mkdir();
+        new File(root + "myFTP SERVER/HOME/").mkdir();
+        new File(root + "myFTP SERVER/HOME/HOME/").mkdir();
         
-        this.default_home = "C:\\myFTP SERVER\\HOME\\HOME";
+        this.default_home = root + "myFTP SERVER/HOME/HOME";
         home_directory = default_home + "";
         // load all attributes from hard drive
         loadWelcomeMsg();

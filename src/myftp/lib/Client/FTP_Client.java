@@ -185,7 +185,7 @@ public class FTP_Client {
         
         privateDownloadThread(String src,FTP_Client this_client)
         {
-            this.src = src;
+            this.src = src + "";
             this.this_client = this_client;
         }
         public void run()
@@ -221,7 +221,7 @@ public class FTP_Client {
                 filesize = Long.parseLong(ds_in.readUTF());
                 //...................
                 byte[] buffer = new byte[512];
-                String name=settings.save_dir + src.substring(src.lastIndexOf("\\")+1);
+                String name=settings.save_dir + src.substring(src.lastIndexOf("/")+1);
  //               System.out.println("to be downloaded: "+name);
                 File f = new File(name);
                 
@@ -309,7 +309,7 @@ public class FTP_Client {
             try {
                 int PORT = Integer.parseInt(us_in.readUTF());
                 
-                us_out.writeUTF(this.this_client.serverListener.cur_relative_dir+"\\"+file.getName());
+                us_out.writeUTF(this.this_client.serverListener.cur_relative_dir+"/"+file.getName());
                 us_out.writeUTF(file.length()+"");
                 
                 //System.out.println(this.this_client.serverListener.cur_relative_dir+file.getName()+" "+file.length());

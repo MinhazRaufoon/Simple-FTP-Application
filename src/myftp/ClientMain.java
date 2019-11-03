@@ -36,6 +36,8 @@ public class ClientMain extends Thread{
         try{
         ClientMain cmain = new ClientMain();
         cmain.start();
-        }catch(Exception e){}
+        }catch(Exception e){
+        	System.out.println(e.getStackTrace());
+        }
     }
 }

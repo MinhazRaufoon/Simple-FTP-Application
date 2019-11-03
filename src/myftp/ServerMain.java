@@ -36,6 +36,8 @@ public class ServerMain extends Thread
         try{
         ServerMain smain = new ServerMain();
         smain.start();
-        }catch(Exception e){}
+        }catch(Exception e){
+        	System.out.println(e.getStackTrace());
+        }
     }
 }

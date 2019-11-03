@@ -51,7 +51,7 @@ public class ClientHddBrowser extends HddBrowser {
         
         for(int i=0;i<localDrives.length;i++)
         {
-            if(!localDrives[i].isHidden()) continue;
+            // if(!localDrives[i].isHidden()) continue;
             scrollpanel.add(new $Directory(localDrives[i],this));
         }
     }

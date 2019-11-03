@@ -71,7 +71,7 @@ public class ClientRequestHandler extends Thread{
     ClientRequestHandler(FTP_Server myServer,Socket me)
     {
         this.current_dir_prefix = myServer.server_settings.home_directory+"";
-        this.current_dir_relative="\\";
+        this.current_dir_relative="/";
         
         //System.out.println(""+myServer.server_settings.home_directory);
         
@@ -239,8 +239,6 @@ public class ClientRequestHandler extends Thread{
     }
     void cancelTransfer(int port)
     {
-        System.out.println("xxxxxx");
-        //System.out.println(this.myServer.uploadThreads.size());
         for(FileReceivingThread frt: this.myServer.uploadThreads)
         {
             
@@ -318,7 +316,7 @@ public class ClientRequestHandler extends Thread{
 
 
     private void sendHomeToClient() {
-        sendList("\\");
+        sendList("/");
     }
     public void refresh()
     {
